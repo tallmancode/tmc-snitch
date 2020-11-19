@@ -1,24 +1,27 @@
 {
   "name": "tmc-snitch",
-  "version": "0.1.0",
-  "private": false  ,
+  "version": "0.1.1",
+  "private": false,
   "author": {
     "name": "TallmanCode",
     "email": "steve@tallmancode.co.za"
   },
   "repository": "https://github.com/tallmancode/tmc-snitch",
   "bugs": "https://github.com/tallmancode/tmc-snitch/issues",
-  "keywords": ["dev tools"],
+  "keywords": [
+    "dev tools"
+  ],
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library" : "vue-cli-service build --target lib --name tmc-snitch ./src/install.js",
+    "build-library": "vue-cli-service build --target lib --name tmc-snitch ./src/install.js",
     "lint": "vue-cli-service lint"
   },
-  "main" : ".dist/tmc-snitch.common.js",
-
+  "main": ".dist/tmc-snitch.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
