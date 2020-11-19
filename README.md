@@ -1,25 +1,33 @@
-# tmc-snitch
+# TMC Snitch
 
-## Project setup
-```
-npm install
-```
+A dev tools package to control logging to the console
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation
 
-### Compiles and minifies for production
-```
-npm run build
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+npm install tmc-snitch
 ```
 
-### Lints and fixes files
+## Usage
+
+```javascript
+import TmcSnitch from 'tmc-snitch';
+
+Vue.use(TmcSnitch);
 ```
-npm run lint
+## How to log a message
+In a template simply call TmcSnitch and pass your message
+
+```javascript
+this.$snitch('your message here')
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# tmc-snitch" 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://github.com/tallmancode/tmc-snitch/blob/main/LICENSE.md)
