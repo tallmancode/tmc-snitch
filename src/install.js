@@ -5,11 +5,17 @@ const defaultOptions = {
     debugGroups: [],
 }
 
-const Plugin = (Vue, userOptions = {}) => {
-    let options = {...defaultOptions, ...userOptions}
-    let methods = Api(Vue, options)
-    Vue.$snitch = methods;
-    Vue.prototype.$snitch = methods;
+const TmcSntich = {
+    install(Vue, userOptions = {}) {
+        let options = {...defaultOptions, ...userOptions}
+        let methods = Api(Vue, options)
+        Vue.$snitch = methods;
+        Vue.prototype.$snitch = methods;
+    }
 }
 
-export default Plugin;
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(TmcSntich);
+}
+
+export default TmcSntich;
