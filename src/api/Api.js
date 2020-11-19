@@ -15,10 +15,12 @@ const Api = (Vue, globalOptions = {}) => {
             }
             let options = {...defaultOptions, ...userOptions};
 
-            if (globalOptions.globalDebug || globalOptions.debugGroups.some(debugGroup => options.groups.includes(debugGroup)) || options.forceShow) console.log(options.message);
-            console.groupCollapsed('TMC Debug Info')
-            console.trace();
-            console.groupEnd();
+            if (globalOptions.globalDebug || globalOptions.debugGroups.some(debugGroup => options.groups.includes(debugGroup)) || options.forceShow){
+                console.log(options.message)
+                console.groupCollapsed('TMC Debug Info')
+                console.trace();
+                console.groupEnd();
+            }
         },
     };
 };

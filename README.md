@@ -21,7 +21,7 @@ Vue.use(TmcSnitch);
 In a template simply call TmcSnitch and pass your message
 
 ```javascript
-this.$snitch('your message here')
+this.$snitch.log('your message here')
 ```
 
 ## Contributing
