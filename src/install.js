@@ -15,7 +15,7 @@ const TmcSnitch = {
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(TmcSntich);
+    window.Vue.use(TmcSnitch);
 }
 
 export default TmcSnitch;
