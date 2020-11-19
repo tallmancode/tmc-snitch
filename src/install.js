@@ -5,7 +5,7 @@ const defaultOptions = {
     debugGroups: [],
 }
 
-const TmcSntich = {
+const TmcSnitch = {
     install(Vue, userOptions = {}) {
         let options = {...defaultOptions, ...userOptions}
         let methods = Api(Vue, options)
@@ -18,4 +18,4 @@ if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(TmcSntich);
 }
 
-export default TmcSntich;
+export default TmcSnitch;

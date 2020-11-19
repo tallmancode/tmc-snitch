@@ -21,7 +21,7 @@
     "build-library": "vue-cli-service build --target lib --name tmc-snitch ./src/install.js",
     "lint": "vue-cli-service lint"
   },
-  "main": ".dist/tmc-snitch.common.js",
+  "main": "./dist/tmc-snitch.common.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
