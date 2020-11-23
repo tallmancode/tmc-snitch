@@ -2,6 +2,7 @@ const defaultOptions = {
     message: 'Default TMC Debug Message',
     groups: [],
     forceDebug: false,
+    info: true
 };
 
 const Api = (Vue, globalOptions = {}) => {
@@ -16,10 +17,13 @@ const Api = (Vue, globalOptions = {}) => {
             let options = {...defaultOptions, ...userOptions};
 
             if (globalOptions.globalDebug || globalOptions.debugGroups.some(debugGroup => options.groups.includes(debugGroup)) || options.forceShow){
-                console.log(options.message)
-                console.groupCollapsed('TMC Debug Info')
-                console.trace();
-                console.groupEnd();
+                console.log('%c '+options.message, 'color: #ef3b2d')
+                if(options.info){
+                    console.groupCollapsed('TMC Debug Info')
+                    console.trace();
+                    console.groupEnd();
+                }
+
             }
         },
     };
