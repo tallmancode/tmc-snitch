@@ -17,7 +17,13 @@ const Api = (Vue, globalOptions = {}) => {
             let options = {...defaultOptions, ...userOptions};
 
             if (globalOptions.globalDebug || globalOptions.debugGroups.some(debugGroup => options.groups.includes(debugGroup)) || options.forceShow){
-                console.log('%c '+options.message, 'color: #ef3b2d')
+
+                if(typeof options.message === 'string'){
+                    console.log('%c '+options.message, 'color: #ef3b2d')
+                }else{
+                    console.log(options.message)
+                }
+
                 if(options.info){
                     console.groupCollapsed('TMC Debug Info')
                     console.trace();
